@@ -32,12 +32,13 @@
 
   <div class="{{ container_class }} {% block page_class %}{% endblock %}">
     <div class="headband"></div>
+<a href="https://github.com/zhangzw001/zhangzw001.github.io.git"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_white_ffffff.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner">{% include '_partials/header/index.swig' %}</div>
     </header>
 
-    {{ partial('_third-party/github-banner.swig', {}, {cache: theme.cache.enable}) }}
+    {{ partial('_partials/github-banner.swig', {}, {cache: theme.cache.enable}) }}
 
     <main id="main" class="main">
       <div class="main-inner">
@@ -80,7 +81,7 @@
         </span>
       </div>
     {% endif %}
-	
+
     {% if theme.baidushare and theme.baidushare.type === "slide" %}
       <div>
         {% include '_partials/share/baidushare.swig' %}
